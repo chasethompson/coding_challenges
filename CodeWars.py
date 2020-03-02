@@ -37,8 +37,38 @@ def Xbonacci(signature,n):
 
     return result[:n]
 
-    """
-    https://www.codewars.com/kata/556deca17c58da83c00002db
+"""
+https://www.codewars.com/kata/556deca17c58da83c00002db
     
-    """
+"""
 
+"""
+
+Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+Examples
+
+to_camel_case("the-stealth-warrior") # returns "theStealthWarrior"
+
+to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
+
+"""
+sp = ['-','_']
+def to_camel_case(text):
+    if len(text) == 0:
+      return text
+    text = text.replace("_","-")
+    s = text.split("-")
+    for i in range(len(s)):
+      if i == 0:
+        continue
+      else:
+        s[i] = s[i].capitalize()
+    res = "".join(i for i in s)
+    return res
+
+"""
+
+https://www.codewars.com/kata/517abf86da9663f1d2000003/solutions/python
+
+"""
