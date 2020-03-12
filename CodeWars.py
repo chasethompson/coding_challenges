@@ -72,3 +72,24 @@ def to_camel_case(text):
 https://www.codewars.com/kata/517abf86da9663f1d2000003/solutions/python
 
 """
+
+
+"""
+What is an anagram? Well, two words are anagrams of each other if they both contain the same letters. For example:
+
+'abba' & 'baab' == true
+
+'abba' & 'bbaa' == true
+
+'abba' & 'abbba' == false
+
+'abba' & 'abca' == false
+
+"""
+
+def anagrams(word, words):
+    return [_ for _ in words if sorted(_) == sorted(word)]
+
+"""
+https://www.codewars.com/kata/523a86aa4230ebb5420001e1
+"""
